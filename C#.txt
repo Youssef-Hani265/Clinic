@@ -1,0 +1,43 @@
+using System ```csharp
+using System;
+using System.Linq;
+using System.Windows;
+using ClinicManagementSystem.Models;
+
+namespace ClinicManagementSystem
+{
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+
+        private void RegisterPatientButton_Click(object sender, RoutedEventArgs e)
+        {
+            using (var context = new ClinicContext())
+            {
+                var patient = new Patient
+                {
+                    FirstName = FirstNameTextBox.Text,
+                    LastName = LastNameTextBox.Text,
+                    DateOfBirth = DateOfBirthPicker.SelectedDate.Value,
+                    ContactNumber = ContactNumberTextBox.Text,
+                    Email = EmailTextBox.Text,
+                    MedicalHistory = string.Empty // You can add a field for medical history if needed
+                };
+
+                context.Patients.Add(patient);
+                context.SaveChanges();
+                MessageBox.Show("Patient registered successfully!");
+            }
+        }
+
+        private void ScheduleAppointmentButton_Click(object sender, RoutedEventArgs e)
+        {
+            // This is a placeholder for scheduling an appointment
+            // You would typically select a doctor and handle the logic here
+            MessageBox.Show("Appointment scheduled for " + AppointmentDatePicker.SelectedDate.Value.ToShortDateString());
+        }
+    }
+}
