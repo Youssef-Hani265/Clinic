@@ -1,0 +1,23 @@
+<Grid>
+        <Label Content="First Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
+        <TextBox x:Name="FirstNameTextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120,10,0,0"/>
+
+        <Label Content="Last Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,40,0,0"/>
+        <TextBox x:Name="LastNameTextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120,40,0,0"/>
+
+        <Label Content="Date of Birth" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,70,0,0"/>
+        <DatePicker x:Name="DateOfBirthPicker" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120,70,0,0"/>
+
+        <Label Content="Contact Number" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,100,0,0"/>
+        <TextBox x:Name="ContactNumberTextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120,100,0,0"/>
+
+        <Label Content="Email" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,130,0,0"/>
+        <TextBox x:Name="EmailTextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120,130,0,0"/>
+
+        <Button Content="Register Patient" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,170,0,0" Click="RegisterPatientButton_Click"/>
+        
+        <Label Content="Appointment Date" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,210,0,0"/>
+        <DatePicker x:Name="AppointmentDatePicker" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120,210,0,0"/>
+
+        <Button Content="Schedule Appointment" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,250,0,0" Click="ScheduleAppointmentButton_Click"/>
+    </Grid>
